@@ -20,6 +20,10 @@ function Tvshows() {
     getdata().catch(console.error);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const heading = "Popular Tv Shows";
 
   return (

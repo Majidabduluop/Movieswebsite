@@ -1,6 +1,7 @@
 import React from "react";
 import { FaYoutube } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function TVCard(props) {
   const navigate = useNavigate();
@@ -8,6 +9,9 @@ function TVCard(props) {
   const Moviedetail = (id) => {
     navigate(`/detail/${id}`);
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className=" text-white bg-black w-screen">

@@ -36,6 +36,10 @@ function Movies() {
     getmovies().catch(console.error);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const heading = "  Now Playing Movies";
   const searchheading = "Movies";
 
