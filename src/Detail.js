@@ -21,51 +21,43 @@ function Detail() {
 
   return (
     <>
-      <div className="text-white w-full bg-black overflow-x-hidden">
-        <div className="bg-white w-full">
-          <div className="w-[100%] h-[80vh] relative">
-            <img
-              className=" w-full h-full object-cover"
-              src={`${"https://image.tmdb.org/t/p/original"}${
-                movie.backdrop_path
-              }`}
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-          </div>
+      <div className="w-full h-[100vh] relative">
+        <img
+          className=" w-full h-full object-cover"
+          src={`${"https://image.tmdb.org/t/p/original"}${movie.backdrop_path}`}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-l from-black to-transparent"></div>
+      </div>
+
+      <div className="absolute top-[17%] left-[3%] grid grid-cols-1 lg:grid lg:grid-cols-3 lg:left-6 lg:top-[20%] md:grid md:grid-cols-2 md:top-[30%] md:left-2">
+        <div className="md:w-[90%] md:h-[70vh] w-[80%] h-[40vh] overflow-hidden">
+          <img
+            className="w-full h-full rounded object-contain"
+            src={`${"https://image.tmdb.org/t/p/original"}${movie.poster_path}`}
+          />
         </div>
 
-        <div className="flex flex-row absolute top-[25%] left-[15%]">
-          <div className=" w-[100%] h-[70vh] overflow-hidden">
-            <img
-              className="w-full h-full rounded object-cover"
-              src={`${"https://image.tmdb.org/t/p/original"}${
-                movie.poster_path
-              }`}
-            />
-          </div>
-        </div>
-
-        <div className="overflow-hidden max-w-full absolute top-[90%] left-[15%]">
-          <h1 className=" font-semibold mt-6 text-3xl hover:text-red-900 w-full">
+        <div className="mt-6 text-white">
+          <h1 className="font-semibold text-xl hover:text-red-900">
             Title:{movie.original_title}
           </h1>
-          <p className="text-xs mt-12 font-sans">Overview: {movie.overview} </p>
-          <div className="flex text-sm mt-8">
-            <button className="border px-1 py-1 rounded bg-yellow-900 mr-8">
+          <p className="md:text-sm text-xs mt-2 md:mt-6 font-sans">
+            Overview: {movie.overview}{" "}
+          </p>
+          <div className="mt-4 flex flex-row gap-12 md:mt-8">
+            {" "}
+            <span className="border rounded px-2 bg-yellow-900">
               Release Data:
-            </button>
-            <p>{movie.release_date}</p>
+            </span>
+            <span>{movie.release_date}</span>
           </div>
-          <div className="flex text-sm mt-2">
-            <button className=" border px-1 py-1 rounded bg-yellow-900  mr-12">
-              Popularity:
-            </button>
+          <div className="mt-4 flex flex-row gap-16 md:mt-6">
+            <p className="border px-2 rounded bg-yellow-900">Popularity:</p>
             <p>{movie.popularity}</p>
           </div>
-
-          <div className="flex text-sm mt-2">
-            <h1 className="border px-1 py-1 rounded bg-yellow-900   mr-12">
+          <div className="mt-4 flex flex-row md:mt-6">
+            <h1 className="border px-1 py-1 rounded bg-yellow-900 mr-12">
               Orignal Language:
             </h1>
             <p>{movie.original_language}</p>
@@ -73,15 +65,15 @@ function Detail() {
         </div>
       </div>
 
-      {/* <div className="bg-black text-white max-w-full overflow-hidden">
-        <h1 className="text-3xl font-bold py-20 ml-16">
-          Watch Full Movies Below here...
-        </h1>
-      </div> */}
+      <div className="bg-black text-white pt-36 pb-14 text-xl text-center font-bold">
+        <h1 className="">Watch Full Movies Below here...</h1>
+      </div>
+
       <iframe
-        className="overflow-hidden w-full h-[700px]"
+        className="overflow-hidden w-full h-[70vh] lg:h-[85vh]"
         src={`https://vidsrc.xyz/embed/movie/${params.id}`}
       />
+      <div className="bg-black py-14"></div>
     </>
   );
 }
