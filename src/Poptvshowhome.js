@@ -18,11 +18,12 @@ function Poptvshowhome() {
   }, []);
 
   const heading = "Popular Tv Shows";
+  const Classname = "image4";
 
   return (
     <>
       <div>
-        <Carrds Heading={heading} data={data} />
+        <Carrds scrollClassName={Classname} Heading={heading} data={data} />
       </div>
     </>
   );

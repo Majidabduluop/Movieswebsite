@@ -18,11 +18,12 @@ function Latestmovieapi() {
   }, []);
 
   const heading = "Top Rated Tv Shows";
+  const ClassName = "image2";
 
   return (
     <>
       <div>
-        <Carrds Heading={heading} data={data} />
+        <Carrds scrollClassName={ClassName} Heading={heading} data={data} />
       </div>
     </>
   );

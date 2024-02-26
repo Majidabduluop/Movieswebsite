@@ -18,11 +18,12 @@ function Api() {
   }, []);
 
   const Heading = "Popular Movies";
+  const ClassName = "image1";
 
   return (
     <>
       <div>
-        <Carrds Heading={Heading} data={data} />
+        <Carrds scrollClassName={ClassName} Heading={Heading} data={data} />
       </div>
     </>
   );

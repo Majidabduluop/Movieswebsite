@@ -18,10 +18,11 @@ function Upcomming() {
   }, []);
 
   const heading = " Upcomming Movies";
+  const ClassName = "image3";
 
   return (
     <>
-      <Carrds Heading={heading} data={data} />
+      <Carrds scrollClassName={ClassName} Heading={heading} data={data} />
     </>
   );
 }
