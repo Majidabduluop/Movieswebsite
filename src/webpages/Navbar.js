@@ -47,7 +47,7 @@ function Navbar() {
             to={"/"}
             className=" font-bold hover:text-red-900 cursor-pointer hover:underline  hover:duration-400 ease-in-out transition-all"
           >
-            <li>Homeeeeeeeeeee</li>
+            <li>Home</li>
           </Link>
           <Link
             to={"/tvshow"}
