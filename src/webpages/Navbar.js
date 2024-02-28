@@ -53,7 +53,7 @@ function Navbar() {
             to={"/tvshow"}
             className=" font-bold  hover:text-red-900 cursor-pointer hover:underline  hover:duration-400 ease-in-out transition-all"
           >
-            <a>Tv Show</a>
+            <a>Tv Showwwww</a>
           </Link>
           <Link
             to={"/movies"}
